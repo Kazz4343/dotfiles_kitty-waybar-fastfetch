@@ -1,0 +1,94 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "source": "/home/kazz4343/Pictures/rebecca__cyberpunk_edgerunners__by_totallynotincina_dgb9ar2-fullview.png",
+    "type": "auto",
+    "height": 15,
+    "padding": {
+      "top": 2,
+      "left": 2,
+    },
+  },
+  "modules": [
+    {
+      "type": "custom",
+      "key": "{#48;2;203;41;87}{#38;2;221;221;221} HARDWARE INFORMATION {#}{#31}\uE0B0",
+      "keyColor": "38;2;203;41;87",
+    },
+    {
+      "type": "board",
+      "key": "├─ MTB ",
+      "keyColor": "38;2;203;41;87",
+    },
+    {
+      "type": "cpu",
+      "key": "├─ CPU ",
+      "keyColor": "38;2;203;41;87",
+    },
+    {
+      "type": "gpu",
+      "format": "{2}",
+      "key": "├─ GPU ",
+      "keyColor": "38;2;203;41;87",
+    },
+    {
+      "type": "memory",
+      "key": "├─ RAM ",
+      "keyColor": "38;2;203;41;87",
+    },
+    {
+      "type": "display",
+      "key": "└─ RES ",
+      "keyColor": "38;2;203;41;87",
+      "compactType": "original",
+    },
+    "break",
+    {
+      "type": "custom",
+      "key": "{#48;2;203;41;87}{#38;2;221;221;221} SOFTWARE INFORMATION {#}{#31}\uE0B0",
+      "keyColor": "38;2;203;41;87",
+    },
+    {
+      "type": "os",
+      "key": "├─ OS  ",
+
+      "keyColor": "38;2;203;41;87",
+    },
+    {
+      "type": "kernel",
+      "key": "├─ KER ",
+      "keyColor": "38;2;203;41;87",
+    },
+    {
+      "type": "wm",
+      "key": "├─ WM  ",
+      "keyColor": "38;2;203;41;87",
+    },
+    {
+      "type": "shell",
+      "key": "├─ SH  ",
+      "keyColor": "38;2;203;41;87",
+    },
+    {
+      "type": "terminal",
+      "key": "├─ TER ",
+      "keyColor": "38;2;203;41;87",
+    },
+    {
+      "type": "packages",
+      "key": "├─ PKG ",
+      "keyColor": "38;2;203;41;87",
+    },
+    {
+      "type": "uptime",
+      "key": "└─ UPT ",
+      "keyColor": "38;2;203;41;87",
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "squares",
+      "paddingLeft": 8,
+    },
+  ],
+}

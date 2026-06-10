@@ -1,0 +1,180 @@
+* {
+  font-family:
+    "Adwaita Sans", "JetBrainsMono Nerd Font", "Symbols Nerd Font", monospace;
+  font-size: 17px;
+  border: none;
+  border-radius: 0;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 1);
+}
+
+tooltip {
+  background: #282c34;
+  border: 1px solid #3e4451;
+  border-radius: 12px;
+}
+
+tooltip label {
+  color: #abb2bf;
+  padding: 6px;
+}
+
+#workspaces {
+  padding: 5px 3px;
+  margin: 7px 0 7px 12px;
+}
+
+#workspaces button {
+  padding: 1px 12px;
+  margin: 0 3px;
+  border-radius: 50px;
+  background-color: #56333d;
+  transition: all 0.3s ease-in-out;
+  color: cyan;
+}
+
+#workspaces button.active {
+  background-color: #cb2957;
+  color: cyan;
+  min-width: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+  background-color: #cb2957;
+  color: transparent;
+  border-radius: 16px;
+}
+
+#workspaces button.urget {
+  background-color: #e06c75;
+  border-radius: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+#battery,
+#backlight,
+#network,
+#pulseaudio {
+  margin-right: 18px;
+}
+
+#clock.time {
+  margin-left: 18px;
+  color: #cb2957;
+  font-family: "JetBrains Mono", sans-serif;
+  padding: 0;
+  text-shadow: 0 3px 1px #68324b;
+  font-size: 20px;
+}
+
+#clock.date {
+  margin-left: 18px;
+  color: cyan;
+  font-family: "JetBrains Mono", sans-serif;
+  text-shadow: 0 2px 1px #005b66;
+}
+
+#network {
+  /* color: @purple; */
+  color: #cb2957;
+  font-family: "JetBrains Mono", sans-serif;
+  text-shadow: 0 3px 1px #68324b;
+}
+
+#battery {
+  min-height: 12px;
+  font-size: 13px;
+  color: #cb2957;
+  font-family: "JetBrains Mono", monospace;
+  padding: 0;
+}
+
+#backlight {
+  color: #dddddd;
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: 13px;
+  min-width: 38px;
+}
+
+#pulseaudio {
+  color: #dddddd;
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: 13px;
+  min-width: 38px;
+}
+
+#custom-bracket-left,
+#custom-bracket-right {
+  color: cyan;
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: 17px;
+  padding: 0 4px;
+}
+
+#pulseaudio-slider {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* The background un-filled track */
+#pulseaudio-slider trough {
+  min-width: 80px;
+  min-height: 12px;
+  background-color: #56333d;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* The active volume fill bar */
+#pulseaudio-slider highlight {
+  min-height: 12px;
+  background-color: #cb2957;
+}
+
+/* CRITICAL: This kills the white square/knob showing in image_27d005.png */
+#pulseaudio-slider slider {
+  min-width: 0px;
+  min-height: 0px;
+  opacity: 0;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+#backlight-slider {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* The background un-filled track */
+#backlight-slider trough {
+  min-width: 80px;
+  min-height: 12px;
+  background-color: #56333d;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* The active volume fill bar */
+#backlight-slider highlight {
+  min-height: 12px;
+  background-color: #cb2957;
+}
+
+/* CRITICAL: This kills the white square/knob showing in image_27d005.png */
+#backlight-slider slider {
+  min-width: 0px;
+  min-height: 0px;
+  opacity: 0;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}

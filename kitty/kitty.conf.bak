@@ -1,0 +1,55 @@
+font_family GeistMono Nerd Font Mono
+font_size 14
+
+disable_ligatures no
+enable_audio_bell no
+
+shell zsh
+shell_integration disabled
+
+cursor_shape block
+
+url_style curly
+
+remember_window_size no
+initial_window_width 640
+initial_window_height 480
+window_padding_width 20
+cursor_blink_interval 1
+
+include themes/Sakura_Night.conf
+
+
+# BEGIN_KITTY_THEME
+# Sakura Night
+include current-theme.conf
+# END_KITTY_THEME
+
+background_opacity 0.87
+scrollbar_handle_opacity 0
+scrollbar_track_opacity 0
+scrollbar_track_hover_opacity 0
+confirm_os_window_close 0
+ background            #1e1e2e
+# foreground            #ada37a
+# cursor                #91805a
+# selection_background  #172539
+# color0                #181818
+# color8                #555555
+# color1                #800009
+# color9                #ab3834
+# color2                #48513b
+# color10               #a6a65d
+# color3                #cc8a3e
+# color11               #dcde7b
+# color4                #566d8c
+# color12               #2f97c6
+# color5                #724c7c
+# color13               #d33060
+# color6                #5b4f4a
+# color14               #f3dab1
+# color7                #ada37e
+# color15               #f3f3f3
+# selection_foreground #181c27
+
+

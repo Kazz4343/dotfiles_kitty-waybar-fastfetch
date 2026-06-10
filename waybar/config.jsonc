@@ -1,0 +1,198 @@
+{
+  "position": "top",
+  "margin-top": 0,
+  "modules-left": ["clock#time", "clock#date"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "group/audio-slider",
+    "pulseaudio",
+    "group/backlight-slider",
+    "backlight",
+    "network",
+    "battery",
+  ],
+
+  "group/audio-slider": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/bracket-left",
+      "pulseaudio/slider",
+      "custom/bracket-right",
+    ],
+  },
+
+  "group/backlight-slider": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/bracket-left",
+      "backlight/slider",
+      "custom/bracket-right",
+    ],
+  },
+
+  "backlight/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+  },
+
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal",
+  },
+
+  "backlight": {
+    "device": "nvidia_0",
+    "format": "{percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "scroll-step": 5,
+  },
+
+  "custom/bracket-right": {
+    "format": "]",
+    "tooltip": false,
+  },
+
+  "custom/bracket-left": {
+    "format": "[",
+    "tooltip": false,
+  },
+
+  "clock#time": {
+    "timezone": "Local",
+    "format": "{:%H:%M}",
+  },
+
+  "clock#date": {
+    "timezone": "Local",
+    "format": "{:%a %e %b}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  },
+
+  "hyprland/workspaces": {
+    "format": "{windows}",
+    "format-window-separator": "|",
+    "workspace-taskbar": {
+      "enable": true,
+      "update-active-window": true,
+      "format": "{icon}",
+      "icon-size": 18,
+      "all-outputs": true,
+    },
+    "persistent-workspaces": {},
+  },
+
+  "pulseaudio": {
+    "format": "{volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", ""],
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"],
+  },
+
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "{essid}",
+    "format-ethernet": "Ethernet",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+  },
+
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "<span foreground='#DDDDDD'>{capacity}%</span> {icon}",
+
+    // "format-icons": ["", "", "", "", ""],
+    "format-icons": [
+      "░░░░░░░░░░", // 0%  (Empty)
+      "█░░░░░░░░░", // 10%
+      "██░░░░░░░░", // 20%
+      "███░░░░░░░", // 30%
+      "████░░░░░░", // 40%
+      "█████░░░░░", // 50%
+      "██████░░░░", // 60%
+      "███████░░░", // 70%
+      "████████░░", // 80%
+      "█████████░", // 90%
+      "██████████",
+    ], // 100% (Full)
+    "max-length": 25,
+  },
+
+  "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='16pt'>{icon}</span>",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓",
+      "inhibited-notification": "󰂛",
+      "inhibited-none": "󰪑",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑",
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+  },
+
+  "hyprland/window": {
+    "max-length": 60,
+    "rewrite": {
+      "(.*) - Brave": "$1",
+      "(.*) - Chromium": "$1",
+      "(.*) - Brave Search": "$1",
+      "(.*) - Outlook": "$1",
+      "(.*) Microsoft Teams": "$1",
+    },
+    "separate-outputs": true,
+  },
+
+  "hyprland/taskbar": {
+    "format": "{icon}",
+    "icon-size": 16,
+    "on-click": "activate",
+  },
+
+  "wlr/taskbar": {
+    "format": "{icon}  {name}",
+    "icon-size": 18,
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": ["Alacritty", "kitty"],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition",
+    },
+    "rewrite": {
+      "Firefox Web Browser": "Firefox",
+      "Foot Server": "Terminal",
+    },
+    "all-outputs": false,
+  },
+
+  "bluetooth": {
+    // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+    "format": " {status}",
+    "format-disabled": "", // an empty format will hide the module
+    "format-connected": " {device_alias}",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+  },
+}
