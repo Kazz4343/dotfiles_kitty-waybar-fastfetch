@@ -25,30 +25,23 @@ tooltip label {
 }
 
 #workspaces {
-  padding: 5px 3px;
-  margin: 7px 0 7px 12px;
 }
 
 #workspaces button {
-  padding: 1px 12px;
-  margin: 0 3px;
-  border-radius: 50px;
-  background-color: #56333d;
+  font-size: 10px;
+  padding: 0 12px;
+  margin: 2px 3px;
   transition: all 0.3s ease-in-out;
-  color: cyan;
+  color: #cb2957;
 }
 
 #workspaces button.active {
-  background-color: #cb2957;
-  color: cyan;
-  min-width: 50px;
+  font-size: 10px;
+  color: #38a2b4;
   transition: all 0.3s ease-in-out;
 }
 
 #workspaces button:hover {
-  background-color: #cb2957;
-  color: transparent;
-  border-radius: 16px;
 }
 
 #workspaces button.urget {
@@ -66,7 +59,7 @@ tooltip label {
 
 #clock.time {
   margin-left: 18px;
-  color: #cb2957;
+  color: #d2523c;
   font-family: "JetBrains Mono", sans-serif;
   padding: 0;
   text-shadow: 0 3px 1px #68324b;
@@ -75,14 +68,14 @@ tooltip label {
 
 #clock.date {
   margin-left: 18px;
-  color: cyan;
+  color: #38a2b4;
   font-family: "JetBrains Mono", sans-serif;
   text-shadow: 0 2px 1px #005b66;
 }
 
 #network {
   /* color: @purple; */
-  color: #cb2957;
+  color: #d2523c;
   font-family: "JetBrains Mono", sans-serif;
   text-shadow: 0 3px 1px #68324b;
 }
@@ -111,7 +104,7 @@ tooltip label {
 
 #custom-bracket-left,
 #custom-bracket-right {
-  color: cyan;
+  color: #38a2b4;
   font-family: "JetBrains Mono", sans-serif;
   font-size: 17px;
   padding: 0 4px;
@@ -177,4 +170,12 @@ tooltip label {
   background-color: transparent;
   box-shadow: none;
   border: none;
+}
+
+#custom-bracket-left-red,
+#custom-bracket-right-red {
+  color: #d2523c;
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: 17px;
+  padding: 0 4px;
 }

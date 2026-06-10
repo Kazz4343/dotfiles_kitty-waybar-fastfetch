@@ -2,7 +2,11 @@
   "position": "top",
   "margin-top": 0,
   "modules-left": ["clock#time", "clock#date"],
-  "modules-center": ["hyprland/workspaces"],
+  "modules-center": [
+    "custom/bracket-left-red",
+    "hyprland/workspaces",
+    "custom/bracket-right-red",
+  ],
   "modules-right": [
     "group/audio-slider",
     "pulseaudio",
@@ -49,6 +53,16 @@
     "scroll-step": 5,
   },
 
+  "custom/bracket-right-red": {
+    "format": "]",
+    "tooltip": false,
+  },
+
+  "custom/bracket-left-red": {
+    "format": "[",
+    "tooltip": false,
+  },
+
   "custom/bracket-right": {
     "format": "]",
     "tooltip": false,
@@ -71,16 +85,22 @@
   },
 
   "hyprland/workspaces": {
-    "format": "{windows}",
-    "format-window-separator": "|",
-    "workspace-taskbar": {
-      "enable": true,
-      "update-active-window": true,
-      "format": "{icon}",
-      "icon-size": 18,
-      "all-outputs": true,
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "I",
+      "2": "II",
+      "3": "III",
+      "4": "IV",
+      "5": "V",
+      "6": "VI",
+      "7": "VII",
+      "8": "VIII",
+      "9": "IX",
+      "10": "X",
     },
-    "persistent-workspaces": {},
   },
 
   "pulseaudio": {
