@@ -1,7 +1,7 @@
 {
   "position": "top",
   "margin-top": 0,
-  "modules-left": ["clock#time", "clock#date"],
+  "modules-left": ["clock#time", "clock#date", "custom/dat", "hyprland/window"],
   "modules-center": [
     "custom/bracket-left-red",
     "hyprland/workspaces",
@@ -32,6 +32,11 @@
       "backlight/slider",
       "custom/bracket-right",
     ],
+  },
+
+  "custom/dat": {
+    "format": "--",
+    "tooltip": false,
   },
 
   "backlight/slider": {
@@ -82,6 +87,14 @@
     "timezone": "Local",
     "format": "{:%a %e %b}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  },
+
+  "hyprland/window": {
+    "format": "{title}",
+    "separate-outputs": false,
+    "icon": false, // Shows the app's desktop icon next to the title
+    "icon-size": 12,
+    "expand": false,
   },
 
   "hyprland/workspaces": {
